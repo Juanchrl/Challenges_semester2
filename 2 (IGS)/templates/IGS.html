@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block konten %}
+<style>
+    p {
+        padding: 1vh;
+        margin: 1vh;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        font-size: 5rem;
+    }
+</style>
+<h1>HOME PAGE....</h1>
+{{ titleWeb }}
+<div>
+
+
+    {% for dt in data %}
+        {% if dt == "I" %}
+            <p class="red" >{{ dt }}</p>
+        {% elif dt == "G" %}
+            <p class="blue">{{ dt }}</p>
+        {% elif dt == "S" %}
+            <p class="green">{{ dt }}</p>
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+{% endblock %}
